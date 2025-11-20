@@ -1,0 +1,221 @@
+{
+
+    "@@locale": "en",
+
+    "register":"Register",
+
+    "@register": {},
+
+    "name":"Name",
+
+    "@name": {},
+
+    "email":"Email",
+
+    "@email": {},
+
+    "password":"Password",
+
+    "@password": {},
+
+    "confirm_password":"Confirm Password",
+
+    "@confirm_password": {},
+
+    "phone_number":"Phone Number",
+
+    "@phone_number": {},
+
+    "create_account":"Create Account",
+
+    "@create_account": {},
+
+    "have_account":"Already Have Account?",
+
+    "@have_account": {},
+
+    "login":"Login",
+
+    "@login": {},
+
+    "forgot_password": "Forgot Password?",
+
+    "@forgot_password": {},
+
+    "dont_have_account": "Don't Have Account ?",
+
+    "@dont_have_account": {},
+
+    "create_one": "Create One",
+
+    "@create_one": {},
+
+    "or": "OR",
+
+    "@or": {},
+
+    "login_with_google": "Login With Google",
+
+    "@login_with_google": {},
+
+    "pick_avatar": "Pick Avatar" ,
+
+    "@pick_avatar": {},
+
+    "reset_password": "Reset Password" ,
+
+    "@reset_password": {},
+    
+    "delete_account": "Delete Account" ,
+
+    "@delete_account": {},
+
+    "update_data": "Update Data",
+
+    "@update_data": {},
+
+    "wish_list": "Wish List",
+
+    "@wish_list": {}  , 
+    
+    "history": "History",
+
+    "@history": {} ,
+
+  "delete_account_confirmation": "Are you sure you want to delete your account?\n\nThis action cannot be undone",
+  
+  "@delete_account_confirmation": {},   
+
+    "cancel": "Cancel",
+
+    "@cancel": {}  ,
+
+    "delete": "Delete",
+
+    "@delete": {} ,
+
+    "old_password": "Old Password",
+
+    "@old_password": {}    ,
+    
+    "new_password": "New Password",
+
+    "@new_password": {}  ,
+    
+    "reset": "Reset",
+
+    "@reset": {} ,
+
+    "edit_profile": "Edit Profile",
+
+    "@edit_profile": {},
+
+    "exit": "Exit",
+
+    "@exit": {} ,
+
+    "find_next_favorite_movie": "Find Your Next Favorite Movie Here",
+
+    "@find_next_favorite_movie": {},
+
+    "explore_now": "Explore Now",
+
+    "@explore_now": {},
+
+    "discover_movies": "Discover Movies",
+
+    "@discover_movies": {},
+
+   "explore_all_genres": "Explore All Genres",
+
+   "@explore_all_genres": {},
+
+ "create_watchlists": "Create Watchlists",
+  "@create_watchlists": {},
+
+  "rate_review_learn": "Rate, Review, and Learn",
+  "@rate_review_learn": {},
+
+   "start_watching_now": "Start Watching Now",
+  "@start_watching_now": {},
+
+  "next": "Next",
+  "@next": {},
+
+    "back": "Back",
+  "@back": {},
+
+    "finish": "Finish",
+  "@finish": {},
+
+    "find_next_favorite_movie_desc": "Get access to a huge library of movies to suit all tastes. You will surely like it.",
+  "@find_next_favorite_movie_desc": {},
+
+  "discover_movies_desc": "Explore a vast collection of movies in all qualities and genres. Find your next favorite film with ease.",
+  "@discover_movies_desc": {},
+
+  "explore_all_genres_desc": "Discover movies from every genre, in all available qualities. Find something new and exciting to watch every day.",
+  "@explore_all_genres_desc": {},
+
+  "create_watchlists_desc": "Save movies to your watchlist to keep track of what you want to watch next. Enjoy films in various qualities and genres.",
+  "@create_watchlists_desc": {},
+
+  "rate_review_learn_desc": "Share your thoughts on the movies you've watched. Dive deep into film details and help others discover great movies with your reviews.",
+  "@rate_review_learn_desc": {},
+
+  "start_watching_now_desc": "Start your journey of discovery and entertainment now.",
+  "@start_watching_now_desc": {},
+    "sure_exit":"Are you sure you want to exit the app ?",
+    "@sure_exit": {},
+
+    "search":"Search",
+    "@search": {},
+
+    "no_movies_found":"No movies found",
+    "@no_movies_found": {},
+
+    "watch":"Watch",
+    "@watch": {},
+
+    "screen_shots":"Screen Shots",
+    "@screen_shots": {},
+
+    "screen_shot_not_found":"ScreenShots are not available 😥",
+    "@screen_shot_not_found": {},
+
+  "similar":"Similar",
+  "@similar": {},
+
+  "similar_not_found":"Similar movies are not available 😥",
+  "@similar_not_found": {},
+
+  "description": "Description",
+  "@description": {},
+
+  "description_not_found": "Description is not available 😥",
+  "@description_not_found": {},
+
+  "cast": "Cast",
+  "@cast": {},
+
+  "unknown_character": "Unknown Character",
+  "@unknown_character": {},
+
+  "unknown": "Unknown",
+  "@unknown": {},
+
+  "no_cast_info": "No cast information available 😥",
+  "@no_cast_info": {},
+
+  "character":"Character",
+  "@character": {},
+
+  "genres": "Genres",
+  "@genres": {},
+
+  "no_genres_available": "No genres available 😥",
+  "@no_genres_available": {},
+
+  "see_more":"See more",
+  "@see_more": {}
+}
