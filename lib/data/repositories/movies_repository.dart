@@ -1,14 +1,16 @@
 import 'package:dio/dio.dart';
+import 'package:movies_app/core/constants/api_endpoints.dart';
 import 'package:movies_app/data/data_sources/local_data_sources/movies_shared_pref_local_data_sources.dart';
-import 'package:movies_app/data/models/movies/movies_model.dart'; // list/search
-import 'package:movies_app/data/models/movies/movie_model.dart'; // details
+import 'package:movies_app/data/models/movies/movies_model.dart';
+import 'package:movies_app/data/models/movies/movie_model.dart';
 
 class MoviesRepository {
   final Dio dio;
   final MoviesSharedPrefLocalDataSources localDataSource;
 
-  MoviesRepository(this.dio,this.localDataSource);
+  MoviesRepository(this.dio, this.localDataSource);
 
+  /// Cached Home Movies
   Future<List<MoviesModel>> getMoviesCashed({bool forceRefresh = false}) async {
     try {
       if (!forceRefresh) {
@@ -16,7 +18,9 @@ class MoviesRepository {
         if (cached.isNotEmpty) return cached;
       }
 
-      final response = await dio.get("https://yts.mx/api/v2/list_movies.json");
+      final response = await dio.get(
+        "${ApiEndpoints.baseUrl}${ApiEndpoints.listMovies}",
+      );
 
       final data = response.data["data"];
       final moviesJson = data?["movies"];
@@ -27,19 +31,17 @@ class MoviesRepository {
           .toList();
 
       await localDataSource.cacheMovies(movies);
-
       return movies;
     } catch (e) {
       throw Exception("Failed to load movies: $e");
     }
   }
 
-
-  /// For search & list
+  /// For general list
   Future<List<MoviesModel>> getMovies() async {
     try {
       final response = await dio.get(
-        "https://yts.mx/api/v2/list_movies.json",
+        "${ApiEndpoints.baseUrl}${ApiEndpoints.listMovies}",
       );
 
       final data = response.data["data"];
@@ -54,11 +56,11 @@ class MoviesRepository {
     }
   }
 
-  /// For search with query
+  /// For search
   Future<List<MoviesModel>> searchMovies(String query) async {
     try {
       final response = await dio.get(
-        "https://yts.mx/api/v2/list_movies.json",
+        "${ApiEndpoints.baseUrl}${ApiEndpoints.listMovies}",
         queryParameters: {
           if (query.isNotEmpty) "query_term": query,
         },
@@ -76,11 +78,11 @@ class MoviesRepository {
     }
   }
 
-  /// For details
+  /// Movie Details
   Future<MovieModel> getMovieDetails(int movieId) async {
     try {
       final response = await dio.get(
-        "https://yts.mx/api/v2/movie_details.json",
+        "${ApiEndpoints.baseUrl}${ApiEndpoints.movieDetails}",
         queryParameters: {
           "movie_id": movieId,
           "with_images": true,
@@ -95,12 +97,14 @@ class MoviesRepository {
     }
   }
 
-  /// For similar movies
+  /// Similar Movies
   Future<List<MovieModel>> getSimilarMovies(int movieId) async {
     try {
       final response = await dio.get(
-        "https://yts.mx/api/v2/movie_suggestions.json",
-        queryParameters: {"movie_id": movieId},
+        "${ApiEndpoints.baseUrl}${ApiEndpoints.movieSuggestions}",
+        queryParameters: {
+          "movie_id": movieId,
+        },
       );
 
       final moviesJson = response.data["data"]["movies"];
